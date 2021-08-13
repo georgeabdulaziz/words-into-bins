@@ -7,6 +7,7 @@ During my Artificial Intelligence course, my professor assigned us with this pro
 
 The Class WordPacking have the function **wordPack** that takes a list of words and returns list of lists that represents the bins and the words inside it. The function estimates the **minimum number of bins** at least needed and starts to increase the number of bins if the previous number did not work.
 
+
 ## About My Approach to Solve the Problem
 
 - Filling the domain: the domain is a hash map of **<key:word, value:the domain of the word>** where the domain of the word contains all the words that have a **link** with the word.
