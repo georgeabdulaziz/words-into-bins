@@ -1,3 +1,4 @@
 #CSP (Constraint Satisfaction Problem)
 
 During my Artificial Intelligence course, my professor assigned us with this problem to do. Using combinatorial search and the techniques of arc consistency and forward checking and back tracking, students must fit a given list of words into the minimum number of bins where no two words with a link between them must go in the same bin. The definition of link here is the existence of any letter for two words at the same position, for example: "share" and "toast" both have the letter "a" in the third position which make them linked, thus, the two words can not fit into one bin.
+YES.
