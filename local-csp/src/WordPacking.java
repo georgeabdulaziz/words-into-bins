@@ -26,20 +26,20 @@ public class WordPacking {
 	//1: backtracking search algorithm 
 	//2: Recursive backtracking that gets called with the first one
 	//3: method to select new variables to be tested or assigned 
-	//4: heuristics that helps the method for selecting all the good values
+	//4: heuristics that help the method for selecting all the good values
 		// first we choose the value that has the least remaining bins available 
 		// second, if all "words" have the same degree of remaining bins then we
 			//choose the value with the highest links or incompatibility with other
 			//words 
-	//5: forward checking, we look at the "words" that has only one bin available
+	//5: forward checking, we look at the "words" that have only one bin available
 		//then we terminate when we learn that it has no legal bind or we indicate
 		//the need to create new bins
-	//6: arc consistency,if a "word" loses the ability to fit in a bin then 
-		//its neighbors need to be rechecked to see if the can still fit in other bins
+	//6: arc consistency, if a "word" loses the ability to fit in a bin then 
+		//its neighbours need to be rechecked to see if they can still fit in other bins
 	//7: we set the minimum amount of bins then we start to increase upon failure 
 	
-	//when you are filling the array and lets say the very last element has no possible
-	//values then you back jump to the element that it causing the problem 
+	//when you are filling the array and let's say the very last element has no possible
+	//values then you back jump to the element that is causing the problem 
 	
 
 	
@@ -49,7 +49,7 @@ public class WordPacking {
 	//the minimum number of letters you need 
 	
 	
-	//this is the a hash map of all the words and an array of their linked words
+	//this is the hash map of all the words and an array of their linked words
 	private static Map<String, ArrayList<String>> domain = new HashMap<String, ArrayList<String>>();
 	private static int numberOfBins = 0;
 	public static void setNumOfBins(int number) {
@@ -211,12 +211,12 @@ public class WordPacking {
 		}
 		
 		//if the word is assigned then it is already in a bin
-		//we need to include the bin that each word was assigned to and the neighbor will look at all its other neighbors and see
+		//we need to include the bin that each word was assigned to and the neighbour will look at all its other neighbours and see
 		//if it would still have bins available 
 		//when we assign a word we should remove the bins available
 		
-		//initially all the words have all the available bins and when you assign a word you remove it from assignment and remove all the bins from its neigbores 
-		//I will make the word have the first element as a counter to indicated the number of available bins left
+		//initially all the words have all the available bins and when you assign a word you remove it from the assignment and remove all the bins from its neighbours 
+		//I will make the word have the first element as a counter to indicate the number of available bins left
 		// and the rest are elements of 0 and 1 where 0 means is not available and 1 means it is still 
 		//and the index of the 0 and 1 points to the bin
 		
